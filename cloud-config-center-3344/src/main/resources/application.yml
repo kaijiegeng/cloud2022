@@ -1,0 +1,73 @@
+server:
+  port: 3344
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:kaijiegeng/springcloud-config.git
+          search-paths:
+            - springcloud-config
+          strict-host-key-checking: false
+          private-key:
+            -----BEGIN RSA PRIVATE KEY-----
+            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
+            -----END RSA PRIVATE KEY-----
+
+      label: main
+
