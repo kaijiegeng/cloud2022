@@ -14,7 +14,12 @@ import java.util.Date;
 @Component
 @Slf4j
 public class MyLogGateWayFilter implements GlobalFilter, Ordered {
-
+    /**
+     * 采用curl访问方式测试
+     * @param exchange
+     * @param chain
+     * @return
+     */
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         log.info("**************** come in MyLogGateWayFilter  " + new Date());
